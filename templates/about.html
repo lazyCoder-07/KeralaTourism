@@ -1,0 +1,262 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block body %}
+{% block content %}
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #198754;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+    <h1><b>Kerala Tourism</b></h1>
+    <style>
+#more {display: none;}
+</style>
+
+<p>Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals.
+    Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife.
+    National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.<span id="dots">...</span><span id="more">The Chera Dynasty was the first prominent kingdom based in Kerala.
+        The Ay kingdom in the deep south and the Ezhimala kingdom in the north formed the other kingdoms in the early years of the Common Era (CE).
+        The region had been a prominent spice exporter since 3000 BCE. The region's prominence in trade was noted in the works of Pliny as well as the Periplus around 100 CE.
+        In the 15th century, the spice trade attracted Portuguese traders to Kerala, and paved the way for European colonisation of India.
+        At the time of Indian independence movement in the early 20th century, there were two major princely states in Kerala: Travancore and Cochin.
+        They united to form the state of Thiru-Kochi in 1949. The Malabar region, in the northern part of Kerala, had been a part of the Madras province of British India, which later became a part of the Madras State post-independence.
+        After the States Reorganisation Act, 1956, the modern-day state of Kerala was formed by merging the Malabar district of Madras State (excluding Gudalur taluk of Nilgiris district, Lakshadweep Islands, Topslip, the Attappadi Forest east of Anakatti), the taluk of Kasaragod (now Kasaragod District) in South Canara (Tulunad), and the erstwhile state of Thiru-Kochi (excluding four southern taluks of Kanyakumari district, and Shenkottai taluks).[15]
+        Kerala has the lowest positive population growth rate in India, 3.44%; the highest Human Development Index (HDI), 0.784 in 2018 (0.712 in 2015); the highest literacy rate, 96.2% in the 2018 literacy survey conducted by the National Statistical Office, India;[8] the highest life expectancy, 77 years; and the highest sex ratio, 1,084 women per 1,000 men. Kerala is the second-least impoverished state in India according to the Annual Report of Reserve Bank of India published in 2013.
+        [18][19] Kerala is the second-most urbanised major state in the country with 47.7% urban population according to the 2011 Census of India.[20] The state topped in the country to achieve the Sustainable Development Goals according to the annual report of NITI Aayog published in 2019.[21] The state has the highest media exposure in India with newspapers publishing in nine languages, mainly English and Malayalam. Hinduism is practised by more than half of the population, followed by Islam and Christianity.
+        The culture is a synthesis of Aryan, Dravidian, Arab, and European cultures,[22] developed over millennia, under influences from other parts of India and abroad.
+        The economy of Kerala is the 8th-largest in India with ₹8.55 trillion (US$110 billion) in gross state domestic product (GSDP) and a per capita net state domestic product of ₹222,000 (US$2,900).[3] The tertiary sector contributes around 65% to state's GSVA, while the primary sector contributes only 8%.[23] The state has witnessed significant emigration, especially to the Arab states of the Persian Gulf during the Gulf Boom of the 1970s and early 1980s, and its economy depends significantly on remittances from a large Malayali expatriate community.
+        The production of pepper and natural rubber contributes significantly to the total national output. In the agricultural sector, coconut, tea, coffee, cashew and spices are important. The state is situated between Arabian Sea to the west and Western Ghats mountain ranges to the east. The state's coastline extends for 595 kilometres (370 mi), and around 1.1 million people in the state are dependent on the fishery industry which contributes 3% to the state's income. Kerala is one of the prominent tourist destinations of India, with coconut-lined sandy beaches, backwaters, hill stations, Ayurvedic tourism and tropical greenery as its major attractions.</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</div>
+
+<h2 style="text-align:center"></h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src={% static "img/ban.jpg" %} alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Kerala 365</h2>
+        <p>Join us with project Kerala 365</p>
+        <p><button class="button">Explore </button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src={% static "img/carvan.jpg" %} alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Go Kerala</h2>
+        <p>Let us plan for you</p>
+
+        <p><button class="button">Plan a trip</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+    <div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+
+        <style>
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
+
+<div class="google-maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016734.7527726707!2d73.88381004802422!3d10.532724200376261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1639629658276!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+{% endblock %}

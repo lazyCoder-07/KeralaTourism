@@ -1,0 +1,31 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block body %}
+
+
+    {% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</style>
+
+<center><h2>Please Login to continue</h2></center>
+        </br></br></br>
+<div class="bg-img">
+  <form action="/loginpage/" method="POST" class="container">
+      {% csrf_token %}
+    <h1>Login</h1>
+
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="name" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw1" required>
+
+    <button type="submit" class="registerbtn">Login</button>
+  </form>
+</div>
+
+
+
+{% endblock %}
+{% endblock %}
